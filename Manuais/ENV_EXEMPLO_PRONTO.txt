@@ -1,0 +1,83 @@
+================================================================================
+ARQUIVO .env - EXEMPLO PRONTO PARA COPIAR E COLAR
+================================================================================
+
+INSTRUÇÕES:
+1. Crie um arquivo chamado ".env" na raiz do projeto
+2. Copie TODO o conteúdo abaixo
+3. Cole no arquivo .env
+4. Edite apenas os valores marcados com "EDITAR ISTO"
+5. Salve o arquivo
+
+================================================================================
+COPIE E COLE ISTO NO ARQUIVO .env:
+================================================================================
+
+# BANCO DE DADOS - EDITAR ISTO!
+# Troque "sua_senha" pela senha que você definiu ao criar o usuário MySQL
+DATABASE_URL=mysql://despachosys:sua_senha@localhost:3306/despachosys_pro
+
+# CHAVE JWT - EDITAR ISTO!
+# Gere uma chave segura com: openssl rand -base64 32
+JWT_SECRET=sua_chave_jwt_super_segura_aqui_minimo_32_caracteres
+
+# OAUTH - Deixe como está (ou use seu próprio VITE_APP_ID se tiver)
+VITE_APP_ID=local-dev
+OAUTH_SERVER_URL=https://api.manus.im
+VITE_OAUTH_PORTAL_URL=https://portal.manus.im
+
+# PROPRIETÁRIO - EDITAR ISTO!
+OWNER_NAME=Seu Nome Aqui
+OWNER_OPEN_ID=seu_email@empresa.com.br
+
+# APIs INTERNAS - Deixe como está
+BUILT_IN_FORGE_API_URL=https://api.manus.im
+BUILT_IN_FORGE_API_KEY=test-key
+VITE_FRONTEND_FORGE_API_URL=https://api.manus.im
+VITE_FRONTEND_FORGE_API_KEY=test-key
+
+# FRONTEND - Pode deixar como está ou editar o título
+VITE_APP_TITLE=DespachoSys Pro
+VITE_APP_LOGO=/logo.svg
+
+# ANALYTICS - Deixe em branco
+VITE_ANALYTICS_ENDPOINT=
+VITE_ANALYTICS_WEBSITE_ID=
+
+================================================================================
+EXEMPLO COMPLETO COM VALORES REAIS:
+================================================================================
+
+DATABASE_URL=mysql://despachosys:minhasenha123@localhost:3306/despachosys_pro
+JWT_SECRET=x7kL9mP2qW5vN8bY3jH6gF1tR4sZ0cX9dE2wQ5uI8oL1pK4mJ7nV
+VITE_APP_ID=local-dev
+OAUTH_SERVER_URL=https://api.manus.im
+VITE_OAUTH_PORTAL_URL=https://portal.manus.im
+OWNER_NAME=João Silva
+OWNER_OPEN_ID=joao.silva@empresa.com.br
+BUILT_IN_FORGE_API_URL=https://api.manus.im
+BUILT_IN_FORGE_API_KEY=test-key
+VITE_FRONTEND_FORGE_API_URL=https://api.manus.im
+VITE_FRONTEND_FORGE_API_KEY=test-key
+VITE_APP_TITLE=DespachoSys Pro
+VITE_APP_LOGO=/logo.svg
+VITE_ANALYTICS_ENDPOINT=
+VITE_ANALYTICS_WEBSITE_ID=
+
+================================================================================
+CHECKLIST:
+================================================================================
+
+[ ] Arquivo .env criado na raiz do projeto (despachosys_pro_v2/.env)
+[ ] DATABASE_URL editado com sua senha do MySQL
+[ ] JWT_SECRET editado com uma chave segura
+[ ] OWNER_NAME editado com seu nome
+[ ] OWNER_OPEN_ID editado com seu email
+[ ] Arquivo salvo
+
+Depois disso, execute:
+  pnpm install
+  pnpm db:push
+  pnpm dev
+
+================================================================================
